@@ -28,7 +28,7 @@ export default function WillYouBe() {
       <div className="justify-centerp-10 flex flex-col items-center">
         <h1 className="font-sour pb-10 text-3xl">Will You Be My Valentines?</h1>
         <div className="flex items-center gap-10">
-          <Link to="/ILoveYou">
+          <Link to="/valentine/ILoveYou">
             <button
               className="rounded-lg border-2 border-black bg-green-400 p-2 px-4 py-2"
               style={{ fontSize: `${yesSize}rem` }}
