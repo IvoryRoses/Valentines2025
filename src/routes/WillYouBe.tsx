@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import BugcatHeart from "../assets/BugcatHeart.gif";
 
-export default function Valentine() {
+export default function WillYouBe() {
   const [noText, setNoText] = useState<string>("No");
   const [yesSize, setYesSize] = useState<number>(1.5);
 
@@ -24,7 +24,7 @@ export default function Valentine() {
   };
 
   return (
-    <div className="hidden; flex h-screen items-center justify-center overflow-hidden bg-[#ce9eba]">
+    <div className="flex h-screen items-center justify-center overflow-hidden bg-[#ce9eba]">
       <div className="justify-centerp-10 flex flex-col items-center">
         <h1 className="font-sour pb-10 text-3xl">Will You Be My Valentines?</h1>
         <div className="flex items-center gap-10">
