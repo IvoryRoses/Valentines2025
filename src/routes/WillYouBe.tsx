@@ -20,30 +20,40 @@ export default function WillYouBe() {
     setNoText(
       (prev) => messages[(messages.indexOf(prev) + 1) % messages.length],
     );
-    setYesSize((prev) => prev * 2.3);
+    setYesSize((prev) => Math.min(prev * 2.3)); // Limits max size to 6rem
   };
 
   return (
-    <div className="flex h-screen items-center justify-center overflow-hidden bg-[#ce9eba]">
-      <div className="justify-centerp-10 flex flex-col items-center">
-        <h1 className="font-sour pb-10 text-3xl">Will You Be My Valentines?</h1>
-        <div className="flex items-center gap-10">
+    <div className="flex h-screen items-center justify-center overflow-hidden bg-[#ce9eba] p-4">
+      <div className="flex flex-col items-center text-center">
+        <h1 className="font-sour pb-6 text-3xl md:text-4xl">
+          Will You Be My Valentine?
+        </h1>
+
+        {/* Buttons container */}
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
           <Link to="/valentine/ILoveYou">
             <button
-              className="rounded-lg border-2 border-black bg-green-400 p-2 px-4 py-2"
+              className="h-auto w-auto rounded-lg border-2 border-black bg-green-400 px-6 py-3 text-lg sm:text-xl"
               style={{ fontSize: `${yesSize}rem` }}
             >
               Yes
             </button>
           </Link>
           <button
-            className="h-auto w-auto rounded-lg border-2 border-black bg-red-500 px-4 py-2 text-2xl"
+            className="h-auto w-auto rounded-lg border-2 border-black bg-red-500 px-6 py-3 text-lg sm:text-xl"
             onClick={OnClickNo}
           >
             {noText}
           </button>
         </div>
-        <img src={BugcatHeart} className="pt-10" />
+
+        {/* Image */}
+        <img
+          src={BugcatHeart}
+          className="mt-6 w-40 sm:w-48 md:w-56"
+          alt="Bugcat Heart"
+        />
       </div>
     </div>
   );
