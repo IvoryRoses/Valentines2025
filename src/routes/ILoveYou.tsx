@@ -5,7 +5,7 @@ export default function ILoveYou() {
   return (
     <div className="font-sour flex h-screen flex-col items-center justify-center overflow-hidden bg-[#ce9eba]">
       <div className="font-sour flex gap-3 text-3xl">
-        <h1>YAYAYAYYAYAYY I Love You!</h1>
+        <h1>You made my Valentines.</h1>
         <div>
           <FaHeart />
         </div>
